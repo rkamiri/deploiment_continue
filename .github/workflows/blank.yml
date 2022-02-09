@@ -1,4 +1,4 @@
-name: Java CI
+name: Mvn tests
 
 on: [push]
 
@@ -14,4 +14,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots verify
+        run: 
+          |
+          cd  cc1Archtecture-cc2
+          mvn clean package test
