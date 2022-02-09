@@ -16,5 +16,5 @@ jobs:
       - name: Build with Maven
         run: 
           |
-          cd  cc1Archtecture-cc2
+          cd  cc1-al-cc2F
           mvn clean package test
