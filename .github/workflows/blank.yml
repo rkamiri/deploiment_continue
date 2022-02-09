@@ -15,5 +15,6 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: 
-          cd ./cc1Archtecture-cc2
-          mvn --batch-mode --update-snapshots verify
+          |
+          cd ./java
+          mvn clean package test
