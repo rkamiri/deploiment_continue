@@ -36,6 +36,12 @@ public class UserController {
         }
     }
 
+
+    @GetMapping(value = "/deploy")
+    public String getDeploy(){
+        return "Agneugneu";
+    }
+
     @PostMapping
     public ResponseEntity<User> postUser(@RequestBody @Valid UserRequest request) {
         Id id = this.userService.addUser(new User(this.userService.getNextId(), request.firstname, request.lastname, request.password, request.email));
