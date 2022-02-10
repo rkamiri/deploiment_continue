@@ -42,7 +42,7 @@ public class UserController {
         return "Agneugneu";
     }
 
-    @getMapping(value = '/communisme')
+    @GetMapping(value = "/communisme")
     public String getCommunism(){
         return "Here comes USSR boii";
     }
