@@ -42,6 +42,11 @@ public class UserController {
         return "Agneugneu";
     }
 
+    @getMapping(value = '/communisme')
+    public String getCommunism(){
+        return "Here comes USSR boii";
+    }
+
     @PostMapping
     public ResponseEntity<User> postUser(@RequestBody @Valid UserRequest request) {
         Id id = this.userService.addUser(new User(this.userService.getNextId(), request.firstname, request.lastname, request.password, request.email));
