@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: http tests
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # ... uses ....
+    - name: Check http status code of production site
+      uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["https://deploiment-continue.herokuapp.com/user/1", "https://deploiment-continue.herokuapp.com/"]'
+        expected: '[200]'
