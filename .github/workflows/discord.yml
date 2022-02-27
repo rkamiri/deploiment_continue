@@ -1,9 +1,9 @@
-name: Notification on push
+name: Discord Notification
 
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   build:
