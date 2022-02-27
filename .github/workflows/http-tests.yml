@@ -22,4 +22,4 @@ jobs:
       uses: lakuapik/gh-actions-http-status@v1
       with:
         sites: '["https://deploiment-continue.herokuapp.com/user/deploy", "https://deploiment-continue.herokuapp.com/user/communisme"]'
-        expected: '[200]'
+        expected: '[200, 200]'
